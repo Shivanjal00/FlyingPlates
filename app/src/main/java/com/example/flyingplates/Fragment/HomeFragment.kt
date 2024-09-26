@@ -12,6 +12,7 @@ import com.denzcoskun.imageslider.models.SlideModel
 import com.example.flyingplates.R
 import com.example.flyingplates.databinding.FragmentHomeBinding
 
+//ForGithub
 
 class HomeFragment : Fragment() {
 

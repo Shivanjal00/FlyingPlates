@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flyingplates.databinding.ActivityStartBinding
 
+//ForGithub
+
 class StartActivity : AppCompatActivity() {
     private lateinit var binding: ActivityStartBinding
 

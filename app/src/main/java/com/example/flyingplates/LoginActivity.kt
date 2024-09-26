@@ -8,6 +8,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.flyingplates.databinding.ActivityLoginBinding
 
+//ForGithub
+
 class LoginActivity : AppCompatActivity() {
     private val binding : ActivityLoginBinding by lazy {
         ActivityLoginBinding.inflate(layoutInflater)

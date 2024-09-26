@@ -10,6 +10,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.flyingplates.databinding.ActivityChooseLocationBinding
 
+//ForGithub
+
 class ChooseLocation : AppCompatActivity() {
     private val binding : ActivityChooseLocationBinding by lazy {
         ActivityChooseLocationBinding.inflate(layoutInflater)
