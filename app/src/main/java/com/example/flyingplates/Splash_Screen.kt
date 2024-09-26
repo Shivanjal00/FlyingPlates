@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-//ForGithub
 
 class Splash_Screen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
