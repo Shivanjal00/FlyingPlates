@@ -5,12 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.flyingplates.R
+import com.example.flyingplates.adapter.CartAdapter
+import com.example.flyingplates.databinding.FragmentCartBinding
 
 class CartFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var binding: FragmentCartBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,8 +22,27 @@ class CartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false)
+        binding = FragmentCartBinding.inflate(inflater, container, false)
+
+        val cartFoodName = listOf("Herbal Pancake",
+            "Fruit Salad",
+            "Green Noodle",
+            "Herbal Pancake",
+            "Green Noodle")
+
+        val cartItemPrice = listOf("$7", "$5", "$15", "$7", "$15")
+        val cartImage = listOf(
+            R.drawable.pancack,
+            R.drawable.fruitsalad,
+            R.drawable.greennoodle,
+            R.drawable.pancack,
+            R.drawable.greennoodle
+        )
+        val adapter = CartAdapter(ArrayList(cartFoodName),ArrayList(cartItemPrice),ArrayList(cartImage))
+        binding.cartRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.cartRecyclerView.adapter = adapter
+
+        return binding.root
     }
 
     companion object {

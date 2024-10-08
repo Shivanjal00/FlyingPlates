@@ -23,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:iss_auto_cycle="true"
+            android:background="@color/white"
             app:iss_delay="2000"
             app:iss_period="2000"
             app:iss_text_align="CENTER" />
@@ -30,14 +31,14 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/PopularRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/viewAllMenu" />
 
     <TextView
         android:id="@+id/textView17"
@@ -45,20 +46,24 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Popular"
+        android:textColor="@color/green"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
-        android:id="@+id/textView18"
-        android:layout_width="80dp"
+        android:id="@+id/viewAllMenu"
+        android:layout_width="150dp"
         android:layout_height="25dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/textviewshape"
         android:elevation="5dp"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="View Menu"
+        android:textColor="@color/green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
