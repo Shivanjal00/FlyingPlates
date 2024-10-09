@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.flyingplates.databinding.MenuItemBinding
 
-class MenuAdapter(private val menuItemsName : MutableList<String>, private val menuItemPrice : MutableList<String>, private val MenuImage : MutableList<Int>) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
+class MenuAdapter(private val menuItemsName: MutableList<String>, private val menuItemPrice: MutableList<String>, private val MenuImage: MutableList<Int>) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
 
 
 

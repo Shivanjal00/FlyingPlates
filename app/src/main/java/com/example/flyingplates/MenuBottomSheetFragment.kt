@@ -11,7 +11,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class MenuBottomSheetFragment : BottomSheetDialogFragment() {
 
-    private lateinit var binding : FragmentMenuBottomSheetBinding
+    private lateinit var binding: FragmentMenuBottomSheetBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,18 +23,24 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
     ): View? {
         binding = FragmentMenuBottomSheetBinding.inflate(inflater, container, false)
 
-        val menuFoodName = listOf("Herbal Pancake",
-            "Fruit Salad",
-            "Green Noodle",
-            "Herbal Pancake",
-            "Green Noodle",
-            "Herbal Pancake",
-            "Fruit Salad",
-            "Green Noodle",
-            "Herbal Pancake",
-            "Green Noodle")
+        binding.buttonBack.setOnClickListener {
+            dismiss()
+        }
 
-        val menuItemPrice = listOf("$7", "$5", "$15", "$7", "$15","$7", "$5", "$15", "$7", "$15")
+        val menuFoodName = listOf(
+            "Herbal Pancake",
+            "Fruit Salad",
+            "Green Noodle",
+            "Herbal Pancake",
+            "Green Noodle",
+            "Herbal Pancake",
+            "Fruit Salad",
+            "Green Noodle",
+            "Herbal Pancake",
+            "Green Noodle"
+        )
+
+        val menuItemPrice = listOf("$7", "$5", "$15", "$7", "$15", "$7", "$5", "$15", "$7", "$15")
         val menuImage = listOf(
             R.drawable.pancack,
             R.drawable.fruitsalad,
@@ -47,7 +53,8 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
             R.drawable.pancack,
             R.drawable.greennoodle
         )
-        val adapter = MenuAdapter(ArrayList(menuFoodName),ArrayList(menuItemPrice),ArrayList(menuImage))
+        val adapter =
+            MenuAdapter(ArrayList(menuFoodName), ArrayList(menuItemPrice), ArrayList(menuImage))
         binding.menuRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.menuRecyclerView.adapter = adapter
 
