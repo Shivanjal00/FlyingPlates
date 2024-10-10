@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".Fragment.ProfilFragment">
 
     <!-- ScrollView to make the content scrollable in case it exceeds the screen height -->
@@ -20,7 +20,7 @@
             <!-- Name Field -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
@@ -35,10 +35,10 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
                     android:text="Name"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:gravity="center_vertical" />
+                    android:textSize="16sp" />
 
                 <EditText
                     android:layout_width="0dp"
@@ -50,13 +50,14 @@
                     android:ems="10"
                     android:fontFamily="@font/roboto_regular"
                     android:inputType="text"
+                    android:maxLines="1"
                     android:text="Shivanjal" />
             </LinearLayout>
 
-            <!-- Address Field -->
+            <!-- Address Field (Expandable) -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
@@ -71,10 +72,10 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
                     android:text="Address"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:gravity="center_vertical" />
+                    android:textSize="16sp" />
 
                 <EditText
                     android:layout_width="0dp"
@@ -86,13 +87,16 @@
                     android:ems="10"
                     android:fontFamily="@font/roboto_regular"
                     android:inputType="textMultiLine"
+                    android:maxLines="5"
+                    android:minLines="1"
+                    android:scrollbars="vertical"
                     android:text="Address" />
             </LinearLayout>
 
-            <!-- Email Field -->
+            <!-- Email Field (Expandable) -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
@@ -107,10 +111,10 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
                     android:text="Email"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:gravity="center_vertical" />
+                    android:textSize="16sp" />
 
                 <EditText
                     android:layout_width="0dp"
@@ -122,13 +126,15 @@
                     android:ems="10"
                     android:fontFamily="@font/roboto_regular"
                     android:inputType="textEmailAddress"
-                    android:text="developer@gmail.com" />
+                    android:maxLines="3"
+                android:minLines="1"
+                android:scrollbars="vertical"
+                android:text="developer@gmail.com" />
             </LinearLayout>
 
-            <!-- Phone Field -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
@@ -144,10 +150,10 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
                     android:text="Phone"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:gravity="center_vertical" />
+                    android:textSize="16sp" />
 
                 <EditText
                     android:layout_width="0dp"
@@ -159,7 +165,8 @@
                     android:ems="10"
                     android:fontFamily="@font/roboto_regular"
                     android:inputType="phone"
-                    android:text="1234567890" />
+                    android:maxLines="1"
+                android:text="1234567890" />
             </LinearLayout>
 
         </LinearLayout>
@@ -170,16 +177,16 @@
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@drawable/profileedittextshape"
-        android:elevation="5dp"
-        android:layout_marginBottom="32dp"
+        android:layout_gravity="bottom"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:textAllCaps="false"
-        android:layout_gravity="bottom"
-        android:textColor="@color/green"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/profileedittextshape"
+        android:elevation="5dp"
         android:fontFamily="@font/roboto_regular"
-        android:textSize="20sp"
-        android:text="Save" />
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/green"
+        android:textSize="20sp" />
 
 </FrameLayout>
