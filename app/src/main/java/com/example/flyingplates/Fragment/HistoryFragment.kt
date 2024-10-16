@@ -1,11 +1,13 @@
 package com.example.flyingplates.Fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.flyingplates.DetailsActivity
 import com.example.flyingplates.R
 import com.example.flyingplates.adapter.BuyAgainAdapter
 import com.example.flyingplates.databinding.FragmentHistoryBinding
@@ -26,6 +28,13 @@ class HistoryFragment : Fragment() {
     ): View? {
         binding = FragmentHistoryBinding.inflate(layoutInflater,container,false)
         setupRecyclerView()
+
+        binding.cardView2.setOnClickListener {
+            val intent = Intent(requireContext(), DetailsActivity::class.java)
+            //Have to set the data like FoodName and FoodImage
+            startActivity(intent)
+        }
+
         return binding.root
     }
 

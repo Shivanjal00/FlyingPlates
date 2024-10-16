@@ -31,10 +31,10 @@
             android:name=".StartActivity"
             android:exported="false" />
         <activity
-            android:name=".Splash_Screen"
+            android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Splash_Screen"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>

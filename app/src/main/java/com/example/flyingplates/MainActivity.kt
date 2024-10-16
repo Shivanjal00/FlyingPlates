@@ -27,6 +27,15 @@ class MainActivity : AppCompatActivity() {
         var bottomnav = findViewById<BottomNavigationView>(R.id.bottomNavigationView4)
         bottomnav.setupWithNavController(NavController)
 
+
+        if (intent.getBooleanExtra("openCart", false)) {
+            // Navigate to CartFragment programmatically
+            bottomnav.selectedItemId = R.id.cartFragment
+
+            // Clear the flag so it won't trigger navigation again
+            intent.removeExtra("openCart")
+        }
+
         binding.notificationButton.setOnClickListener {
             val bottomSheetDialog = Notification_Bottom_Fragment()
             bottomSheetDialog.show(supportFragmentManager,"Test")
